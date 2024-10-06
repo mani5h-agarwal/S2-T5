@@ -2,7 +2,7 @@
 
 ## Team Details
 <details>
-  <summary> </summary>
+  <summary> S2-T5 </summary>
 
   > Semester: 3rd Sem B. Tech. CSE
 
