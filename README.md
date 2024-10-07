@@ -32,7 +32,7 @@ college students and beyond.
  ### Problem Statement
 
   >
-The ChronoFit project aims to develop a digital stopwatch that not only functions as a conventional lap timer but also provides fitness insights such as calorie count, heart rate estimates,
+The ChronoFit project aims to develop a digital stopwatch that not only functions as a conventional lap timer but also provides fitness insights such as calorie count, heart rate estimates,
 and stamina tracking—all without the use of physical sensors. By utilizing average data and
 user inputs (such as weight, distance covered, age, and type of activity), ChronoFit will deliver
 a unique, sensor-free approach to fitness monitoring.
@@ -45,7 +45,7 @@ a unique, sensor-free approach to fitness monitoring.
   > Standard stopwatch functionality to track time. Ability to record and display multiple lap times.
 
 • **Calorie Calculation**:
-  > Estimates calories burned based on user inputs (weight, age, type of activity) using established formulas.
+  > Estimates calories burned based on user inputs (weight, age, type of activity) using established formulas.
  
 • **Heart Rate Estimation**:
   > Calculates estimated heart rate based on age and activity level using standard equations.
