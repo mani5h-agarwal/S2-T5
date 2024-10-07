@@ -94,8 +94,8 @@ a unique, sensor-free approach to fitness monitoring.
 <details>
   <summary>Detail</summary>
   
->[r1, ] 555 Timer IC Pin Diagram, Circuit, Working, Datasheet, Modes — electronicsforu.com.
-> https://www.electronicsforu.com/technology-trends/learn-electronics/555-timerworking-specifications.
+>[r1, ] 555 Timer IC Pin Diagram, Circuit, Working, Datasheet, Modes — electronicsforu.com.
+> https://www.electronicsforu.com/technology-trends/learn-electronics/555-timer-working-specifications.
 
   > [gee, ] Shift Registers in Digital Logic - GeeksforGeeks — geeksforgeeks.org.                
 > https://www.geeksforgeeks.org/shift-registers-in-digital-logic/.
