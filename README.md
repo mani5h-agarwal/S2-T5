@@ -51,7 +51,7 @@ a unique, sensor-free approach to fitness monitoring.
   > Calculates estimated heart rate based on age and activity level using standard equations.
 
 • **Stamina Tracking**:
-  > Evaluates stamina based on duration of activity and estimated calories burned
+  > Evaluates stamina based on duration of activity.
 
 
 
