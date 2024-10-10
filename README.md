@@ -2,7 +2,7 @@
 
 ## Team Details
 <details>
-  <summary> S2-T5 </summary>
+  <summary> Click here </summary>
 
   > Semester: 3rd Sem B. Tech. CSE
 
@@ -18,7 +18,9 @@
 </details>
 
 ## Abstract
-
+<details>
+  <summary>Click here</summary>
+  
   ### Motivation
   
   > 
@@ -54,13 +56,13 @@ a unique, sensor-free approach to fitness monitoring.
   > Evaluates stamina based on duration of activity.
 
 
-
+</details>
   
 
 
 ## Functional Block Diagram
 <details>
-  <summary> </summary>
+  <summary> Click here </summary>
   
   ![S2-T5 drawio](https://github.com/user-attachments/assets/f3c197f8-5e1e-40d4-8b6b-5fcf834f0afa)
 
@@ -69,7 +71,7 @@ a unique, sensor-free approach to fitness monitoring.
 
 ## Working
 <details>
-  <summary>Detail</summary>
+  <summary>Click here</summary>
 
   > Explain how your model works with the help of a functional table (compulsory) followed by the flowchart.
 </details>
@@ -77,7 +79,7 @@ a unique, sensor-free approach to fitness monitoring.
 <!-- Fourth Section -->
 ## Logisim Circuit Diagram
 <details>
-  <summary>Detail</summary>
+  <summary>Click here</summary>
 
   > Update a neat logisim circuit diagram
 </details>
@@ -85,14 +87,14 @@ a unique, sensor-free approach to fitness monitoring.
 <!-- Fifth Section -->
 ## Verilog Code
 <details>
-  <summary>Detail</summary>
+  <summary>Click here</summary>
 
   > Neatly update the Verilog code in code style only.
 </details>
 
 ## References
 <details>
-  <summary>Detail</summary>
+  <summary>Click here</summary>
   
 >[r1, ] 555 Timer IC Pin Diagram, Circuit, Working, Datasheet, Modes — electronicsforu.com.
 > https://www.electronicsforu.com/technology-trends/learn-electronics/555-timer-working-specifications.
