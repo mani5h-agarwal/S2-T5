@@ -122,7 +122,7 @@ The activity which was being performed for the given time is stored in a registe
 
  ![S2-T5](https://github.com/user-attachments/assets/64345885-6bbb-4856-a18b-c3e2eddb2cf0)
 
-#### Functi0nal Table(Sample Cases)
+#### Functional Table(Sample Cases)
 | Seconds | RHR | Weight | Distance | Activity | Reset | Calories (Run) | Calories (Walk) | Calories (Cycle) | THR | Speed |
 |:-------:|:---:|:------:|:--------:|:--------:|:-----:|:--------------:|:---------------:|:----------------:|:---:|:-----:|
 |000101|0111100|1000110|1100100|100|0|11011010110|0|0|1100101|10100|
