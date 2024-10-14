@@ -143,7 +143,14 @@ The activity which was being performed for the given time is stored in a registe
 ## Verilog Code
 <details>
   <summary>Click here</summary>
-
+```verilog
+module adder(
+    input [3:0] A,
+    input [3:0] B,
+    output [4:0] Sum
+);
+    assign Sum = A + B; // Summing the two 4-bit inputs
+endmodule
   > Neatly update the Verilog code in code style only.
 </details>
 
