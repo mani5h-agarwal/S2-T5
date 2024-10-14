@@ -124,7 +124,7 @@ The activity which was being performed for the given time is stored in a registe
 
 | Time | RHR | Weight | Age | Distance | Activity | Reset | Calories Burnt | Target Heart Rate | Speed |
 |------|-----|--------|-----|----------|----------|-------|----------------|-------------------|-------|
-|000110|1111000|1000100|0110000|01000000|100|0|000000111111110000|10011101|00001010|
+|000110|1111000|1000100|0110000|01000000|100|:0:|000000111111110000|:10011101:|00001010|
  
 </details>
 
