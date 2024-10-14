@@ -136,7 +136,26 @@ The activity which was being performed for the given time is stored in a registe
 <details>
   <summary>Click here</summary>
 
-  > Update a neat logisim circuit diagram
+#### Main Circuit Diagram
+ ![ChronoFit](https://github.com/user-attachments/assets/085a8d99-86e6-448e-b190-dce732be354a)
+#### Calorie Calculator Module
+![CaloCalc](https://github.com/user-attachments/assets/2359c578-6ed6-4ac1-b910-b31921a7b523)
+#### Speed Calculator Module
+![SpeedCalc](https://github.com/user-attachments/assets/ce588654-d92e-48d2-866b-88337b47ba6d)
+#### Heart Rate Estimator Module
+![HRcalc](https://github.com/user-attachments/assets/76bece36-5ec0-45c7-b5df-4b1db718c326)
+#### Sequential Module
+![Sequential](https://github.com/user-attachments/assets/a9d8659c-8432-4afb-9ce4-52932ae8ffd8)
+#### Counter Clock Used in Sequential Module 
+![CounterClock](https://github.com/user-attachments/assets/e12adf79-bf0e-4bcf-a6eb-0d6a2fc1a2f0)
+#### Multiplier Circuit
+![Multiplier](https://github.com/user-attachments/assets/85453ef2-b4f2-4b91-a96b-4427dfe4b022)
+#### Divider Circuit
+![Divider](https://github.com/user-attachments/assets/885f3152-a40f-4360-981e-adc0051be0a1)
+#### Processing Unit used in Divider
+![ProcessUnit](https://github.com/user-attachments/assets/e67d0fe7-eec0-4678-aa54-d34cd9491acf)
+
+
 </details>
 
 <!-- Fifth Section -->
