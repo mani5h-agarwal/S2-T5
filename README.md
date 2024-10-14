@@ -64,7 +64,9 @@ a unique, sensor-free approach to fitness monitoring.
 <details>
   <summary> Click here </summary>
   
-  ![S2-T5 drawio](https://github.com/user-attachments/assets/f3c197f8-5e1e-40d4-8b6b-5fcf834f0afa)
+ ![block_diagram](https://github.com/user-attachments/assets/8256d4ca-b630-43bc-86f8-6f9e13b05982)
+
+
 
 
 </details>
@@ -76,6 +78,15 @@ a unique, sensor-free approach to fitness monitoring.
   ### Main Circuit's Working
   In this project model, users input their Weight, Age, Resting Heart Rate(RHR) and Distance along with selecting a specific type of physical activity (namely Walking, Running or Cycling) to receive data upon certain physical attributes after performing the said activity. Once the activity is selected using a switch (which also acts as the start-stop switch for the stopwatch clock), simultaneously the sequential block of the circuit is triggered which is used to track the duration of the activity. The inputs of the users are stored in registers which relay the necessary data further to the respective modules.
   To enter the data of a new user, a reset switch is used which resets the stored values of all the registers to zero, since we have used low level trigger registers here. This allows us to change the data as we require for the new user after which we can toggle the reset switch back to zero to calculate the data for the new user.
+
+The following components are used for the implementation of all the modules:
+	
+ > 1) Adders
+>  3) Subtractors
+>  4) Muxipliers
+>  5) Basic logic gates like OR, AND, NOT gates
+>  6) Registers
+>  7) JK flip flops
 
 The following modules are used in the circuit: 
 
@@ -109,7 +120,7 @@ The reset button is used to reset the timer to zero. Also, since this is a minut
 
 The activity which was being performed for the given time is stored in a register because if we were to feed the activity inputs directly into the combinational modules for the calculations, then as soon as the input activities are toggled to zero, the data for the activities passed to the combinational circuits would turn to zero too. To overcome this difficulty, I used a rising edge register which stores the value of the activity which was being performed before the timer went back to zero. This way the value stored in the register is overwritten only when the activity input goes from 0 to 1, in which case the new activity would be stored in the register, which is then passed onto the further circuits for calculations.
 
-
+ ![S2-T5](https://github.com/user-attachments/assets/64345885-6bbb-4856-a18b-c3e2eddb2cf0)
 </details>
 
 <!-- Fourth Section -->
