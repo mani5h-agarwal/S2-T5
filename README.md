@@ -163,6 +163,14 @@ The activity which was being performed for the given time is stored in a registe
 <details>
   <summary>Click here</summary>
 <img width="596" alt="Screenshot 2024-10-15 at 12 21 57 AM" src="https://github.com/user-attachments/assets/7971f8dd-a652-4a7e-9fc5-910c7f6e1e77">
+<img width="555" alt="Screenshot 2024-10-15 at 12 22 29 AM" src="https://github.com/user-attachments/assets/c547ee5b-3a04-4a0c-8b43-7ea8f862757c">
+<img width="525" alt="Screenshot 2024-10-15 at 12 22 53 AM" src="https://github.com/user-attachments/assets/c44c9d62-066a-47e1-9e79-c640104abc85">
+<img width="543" alt="Screenshot 2024-10-15 at 12 23 16 AM" src="https://github.com/user-attachments/assets/f8ddcb0d-84a4-4f24-935a-b5a009b5ca55">
+<img width="552" alt="Screenshot 2024-10-15 at 12 23 32 AM" src="https://github.com/user-attachments/assets/9177e696-8d14-4b9a-8058-b702bf15f1ed">
+<img width="501" alt="Screenshot 2024-10-15 at 12 23 47 AM" src="https://github.com/user-attachments/assets/682bccc6-3637-4f60-8ca4-14ed2c3f0b57">
+<img width="528" alt="Screenshot 2024-10-15 at 12 24 02 AM" src="https://github.com/user-attachments/assets/f18cc2b2-163f-4f19-b7a6-ad93acdc5498">
+<img width="583" alt="Screenshot 2024-10-15 at 12 24 26 AM" src="https://github.com/user-attachments/assets/2f2a6891-0a6d-4d6b-953f-8ce8cf1cd291">
+<img width="529" alt="Screenshot 2024-10-15 at 12 24 58 AM" src="https://github.com/user-attachments/assets/01a4a9c8-8f66-46f6-a6fb-1a780767fb9b">
 
 
 </details>
