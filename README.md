@@ -121,6 +121,11 @@ The reset button is used to reset the timer to zero. Also, since this is a minut
 The activity which was being performed for the given time is stored in a register because if we were to feed the activity inputs directly into the combinational modules for the calculations, then as soon as the input activities are toggled to zero, the data for the activities passed to the combinational circuits would turn to zero too. To overcome this difficulty, I used a rising edge register which stores the value of the activity which was being performed before the timer went back to zero. This way the value stored in the register is overwritten only when the activity input goes from 0 to 1, in which case the new activity would be stored in the register, which is then passed onto the further circuits for calculations.
 
  ![S2-T5](https://github.com/user-attachments/assets/64345885-6bbb-4856-a18b-c3e2eddb2cf0)
+
+| Time | RHR | Weight |
+|------|-----|--------|
+|abc   |def  |erhg    |
+ 
 </details>
 
 <!-- Fourth Section -->
