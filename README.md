@@ -81,11 +81,12 @@ a unique, sensor-free approach to fitness monitoring.
 
 The following components are used for the implementation of all the modules:
 	
->  1) Adders
->  2) Muxipliers
->  3) Basic logic gates like OR, AND, NOT gates
->  4) Registers
->  5) JK flip flops
+>  1) Adder
+>  2) Multiplier
+>  3) Multiplexer
+>  4) Basic logic gates like OR, AND, NOT gates
+>  5) Registers
+>  6) JK flip flops
 
 The following modules are used in the circuit: 
 
