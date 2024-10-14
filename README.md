@@ -162,7 +162,8 @@ The activity which was being performed for the given time is stored in a registe
 ## Verilog Code
 <details>
   <summary>Click here</summary>
-![Uploading Screenshot 2024-10-15 at 12.21.57 AM.png…]()
+<img width="596" alt="Screenshot 2024-10-15 at 12 21 57 AM" src="https://github.com/user-attachments/assets/7971f8dd-a652-4a7e-9fc5-910c7f6e1e77">
+
 
 </details>
 
