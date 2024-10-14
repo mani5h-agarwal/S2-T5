@@ -122,7 +122,7 @@ The activity which was being performed for the given time is stored in a registe
 
  ![S2-T5](https://github.com/user-attachments/assets/64345885-6bbb-4856-a18b-c3e2eddb2cf0)
 
-####Truth Table(Sample Cases)
+#### Truth Table(Sample Cases)
 | Time | RHR | Weight | Age | Distance | Activity | Reset | Calories Burnt | Target Heart Rate | Speed |
 |:----:|:---:|:------:|:---:|:--------:|:--------:|:-----:|:--------------:|:-----------------:|:-----:|
 |000110|1111000|1000100|0110000|01000000|100|0|000000111111110000|10011101|00001010|
