@@ -59,17 +59,17 @@ initial begin
     // Reset the system
     #10 rst = 0;
 
-    // Test case 1: Start activity 1 for 10 seconds
+    // Test case 1
     #20 Run = 1;
-    #100 Run = 0;  // Simulate activity 1 for 10 seconds
+    #100 Run = 0;
 
-    // Test case 2: Start activity 2 for 15 seconds
+    // Test case 2
     #20 Walk = 1;
-    #150 Walk = 0;  // Simulate activity 2 for 15 seconds
+    #150 Walk = 0;
 
-    // Test case 3: Start activity 3 for 20 seconds
+    // Test case 3
     #20 Cycle = 1;
-    #200 Cycle = 0;  // Simulate activity 3 for 20 seconds
+    #200 Cycle = 0; 
 
 
     #20 $display("Average Speed:%d m/s", distance/(seconds_Run+seconds_Walk+seconds_Cycle));
