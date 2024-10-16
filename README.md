@@ -493,9 +493,9 @@ The activity which was being performed for the given time is stored in a registe
 	);
 	
 	    // Constants for calorie calculation, explicitly defined as 8 bits
-	    localparam [7:0] constant_a1 = 8'd5;  // Constant for activity 1
-	    localparam [7:0] constant_a2 = 8'd8;  // Constant for activity 2
-	    localparam [7:0] constant_a3 = 8'd10; // Constant for activity 3
+	    localparam [7:0] constant_a1 = 8'd10;  // Constant for activity 1
+	    localparam [7:0] constant_a2 = 8'd5;  // Constant for activity 2
+	    localparam [7:0] constant_a3 = 8'd8; // Constant for activity 3
 	
 	    wire [15:0] weight_time_a1; // Intermediate product for activity 1
 	    wire [15:0] weight_time_a2; // Intermediate product for activity 2
