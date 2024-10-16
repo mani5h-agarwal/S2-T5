@@ -161,17 +161,302 @@ The activity which was being performed for the given time is stored in a registe
 <!-- Fifth Section -->
 ## Verilog Code
 <details>
-  <summary>Click here</summary>
-<img width="596" alt="Screenshot 2024-10-15 at 12 21 57 AM" src="https://github.com/user-attachments/assets/7971f8dd-a652-4a7e-9fc5-910c7f6e1e77">
-<img width="555" alt="Screenshot 2024-10-15 at 12 22 29 AM" src="https://github.com/user-attachments/assets/c547ee5b-3a04-4a0c-8b43-7ea8f862757c">
-<img width="525" alt="Screenshot 2024-10-15 at 12 22 53 AM" src="https://github.com/user-attachments/assets/c44c9d62-066a-47e1-9e79-c640104abc85">
-<img width="543" alt="Screenshot 2024-10-15 at 12 23 16 AM" src="https://github.com/user-attachments/assets/f8ddcb0d-84a4-4f24-935a-b5a009b5ca55">
-<img width="552" alt="Screenshot 2024-10-15 at 12 23 32 AM" src="https://github.com/user-attachments/assets/9177e696-8d14-4b9a-8058-b702bf15f1ed">
-<img width="501" alt="Screenshot 2024-10-15 at 12 23 47 AM" src="https://github.com/user-attachments/assets/682bccc6-3637-4f60-8ca4-14ed2c3f0b57">
-<img width="528" alt="Screenshot 2024-10-15 at 12 24 02 AM" src="https://github.com/user-attachments/assets/f18cc2b2-163f-4f19-b7a6-ad93acdc5498">
-<img width="583" alt="Screenshot 2024-10-15 at 12 24 26 AM" src="https://github.com/user-attachments/assets/2f2a6891-0a6d-4d6b-953f-8ce8cf1cd291">
-<img width="529" alt="Screenshot 2024-10-15 at 12 24 58 AM" src="https://github.com/user-attachments/assets/01a4a9c8-8f66-46f6-a6fb-1a780767fb9b">
+	<summary>Gate Level</summary>
+</details>
 
+<details>
+  <summary>Behavioral</summary>
+	
+
+	
+	module fitness_tracker (
+	    input wire clk,          // Clock signal
+	    input wire rst,          // Reset signal
+	    input wire [6:0] RHR,  // 7-bit Resting heart rate
+	    input wire [6:0] weight,      // 7-bit Weight input
+	    input wire [6:0] age,         // 7-bit Age input
+	    input wire [7:0] distance,    // 8-bit Distance input
+	    input wire Run,         // Activity 1 button input
+	    input wire Walk,         // Activity 2 button input
+	    input wire Cycle,         // Activity 3 button input
+	    output wire [5:0] seconds_Run, // Time spent on activity 1 (6-bit)
+	    output wire [5:0] seconds_Walk, // Time spent on activity 2 (6-bit)
+	    output wire [5:0] seconds_Cycle, // Time spent on activity 3 (6-bit)
+	    output wire [15:0] calories_Run, // Calories burned in activity 1
+	    output wire [15:0] calories_Walk, // Calories burned in activity 2
+	    output wire [15:0] calories_Cycle, // Calories burned in activity 3
+	    output wire [15:0] speed,       // Speed calculation
+	    output wire [15:0] THR    // Heartbeat calculation
+	);
+
+	// Instantiate the stopwatch module to track time for each activity
+	fitness_stopwatch stopwatch_inst (
+	    .clk(clk),
+	    .rst(rst),
+	    .RHR(RHR),
+	    .weight(weight),
+	    .age(age),
+	    .distance(distance),
+	    .Run(Run),
+	    .Walk(Walk),
+	    .Cycle(Cycle),
+	    .seconds_Run(seconds_Run),
+	    .seconds_Walk(seconds_Walk),
+	    .seconds_Cycle(seconds_Cycle)
+	);
+
+	// Instantiate the calorie calculator module to calculate calories burned
+	calorie_calculator calorie_calc_inst (
+	    .weight(weight),
+	    .time_Run(seconds_Run),
+	    .time_Walk(seconds_Walk),
+	    .time_Cycle(seconds_Cycle),
+	    .calories_Run(calories_Run),
+	    .calories_Walk(calories_Walk),
+	    .calories_Cycle(calories_Cycle)
+	);
+
+	// Instantiate the speed calculator module to calculate the speed
+	speed_calculator speed_calc_inst (
+	    .distance(distance),
+	    .time_Run(seconds_Run),
+	    .time_Walk(seconds_Walk),
+	    .time_Cycle(seconds_Cycle),
+	    .speed(speed)
+	);
+
+	// Instantiate the heartbeat calculator module to calculate the heartbeat
+	heartbeat_calculator heartbeat_calc_inst (
+	    .RHR(RHR),
+	    .weight(weight),
+	    .speed(speed),
+	    .THR(THR)
+	);
+
+	endmodule
+
+
+	// Stopwatch Submodule to track activity time
+	module fitness_stopwatch (
+	    input wire clk,
+	    input wire rst,
+	    input wire [6:0] RHR,
+	    input wire [6:0] weight,
+	    input wire [6:0] age,
+	    input wire [7:0] distance,
+	    input wire Run,
+	    input wire Walk,
+	    input wire Cycle,
+	    output reg [5:0] seconds_Run,  // Time counter for activity 1
+	    output reg [5:0] seconds_Walk,  // Time counter for activity 2
+	    output reg [5:0] seconds_Cycle   // Time counter for activity 3
+	);
+
+	reg [5:0] counter_Run, counter_Walk, counter_Cycle;
+	
+	always @(posedge clk or posedge rst) begin
+	    if (rst) begin
+	        counter_Run <= 6'd0;
+	        counter_Walk <= 6'd0;
+	        counter_Cycle <= 6'd0;
+	        seconds_Run <= 6'd0;
+	        seconds_Walk <= 6'd0;
+	        seconds_Cycle <= 6'd0;
+	    end else begin
+	        // Activity 1 time tracking
+	        if (Run) begin
+	            if (counter_Run < 6'd59)
+	                counter_Run <= counter_Run + 1;
+	            else
+	                counter_Run <= 6'd0;  // Reset counter after 59 seconds
+	        end
+	        seconds_a1 <= counter_a1;
+
+	        // Activity 2 time tracking
+	        if (Walk) begin
+	            if (counter_a2 < 6'd59)
+	                counter_Walk <= counter_Walk + 1;
+	            else
+	                counter_Walk <= 6'd0;
+	        end
+	        seconds_Walk <= counter_Walk;
+
+	        // Activity 3 time tracking
+	        if (Cycle) begin
+	            if (counter_Cycle < 6'd59)
+	                counter_Cycle <= counter_Cycle + 1;
+	            else
+	                counter_Cycle <= 6'd0;
+	        end
+	        seconds_Cycle <= counter_Cycle;
+	    end
+	end
+	
+	endmodule
+
+
+	// Calorie Calculator Submodule
+	module calorie_calculator (
+	    input wire [6:0] weight,       // User's weight
+	    input wire [5:0] time_Run,      // Time spent on activity 1
+	    input wire [5:0] time_Walk,      // Time spent on activity 2
+	    input wire [5:0] time_Cycle,      // Time spent on activity 3
+	    output reg [15:0] calories_Run, // Calories burned in activity 1
+	    output reg [15:0] calories_Walk, // Calories burned in activity 2
+	    output reg [15:0] calories_Cycle  // Calories burned in activity 3
+	);
+
+	// Constants for calorie calculation
+	localparam MET_Run = 5;
+	localparam MET_Walk = 8;
+	localparam MET_Cycle = 10;
+
+	always @(*) begin
+	    // Calorie calculation for each activity
+	    calories_Run = MET_Run * weight * time_Run;
+	    calories_Walk = MET_Walk * weight * time_Walk;
+	    calories_Cycle = MET_Cycle * weight * time_Cycle;
+	end
+
+	endmodule
+
+
+	// Speed Calculator Submodule
+	module speed_calculator (
+	    input wire [7:0] distance,    // Distance travelled
+	    input wire [5:0] time_Run,     // Time spent on activity 1
+	    input wire [5:0] time_Walk,     // Time spent on activity 2
+	    input wire [5:0] time_Cycle,     // Time spent on activity 3
+	    output reg [15:0] speed       // Calculated speed (distance / time)
+	);
+
+	reg [5:0] total_time;  // Total time spent across all activities
+
+	always @(*) begin
+	    total_time = time_Run + time_Walk + time_Cycle;  // Total time spent in all activities
+	    
+	    // Check if total_time is non-zero to avoid division by zero
+	    if (total_time > 0) begin
+	        speed = distance / total_time;  // Calculate speed (distance/time)
+	    end else begin
+	        speed = 16'd0;  // Set speed to zero if no time has been recorded
+	    end
+	end
+
+	endmodule
+
+
+	// Heartbeat Calculator Submodule
+	module heartbeat_calculator (
+	    input wire [6:0] RHR,   // Resting heart rate
+	    input wire [6:0] weight,       // Weight of the user
+	    input wire [15:0] speed,       // Speed of the user
+	    output reg [15:0] THR    // Calculated heartbeat
+	);
+
+	// Fixed-point multiplication constants for weight and speed contributions
+	localparam weight_factor = 5;  // Approximation for 0.5 * weight (scaled up by 10)
+	localparam speed_factor = 3;   // Approximation for 0.3 * speed (scaled up by 10)
+	
+	always @(*) begin
+	    // Heartbeat calculation: hr_resting + (0.5 * weight) + (0.3 * speed)
+	    THR = RHR + (weight * weight_factor) / 10 + (speed * speed_factor) / 10;
+	end
+	
+	endmodule
+
+</details>
+<details>
+	<summary>Testbench</summary>
+
+	module tb_fitness_tracker;
+	
+	// Inputs
+	reg clk;
+	reg rst;
+	reg [7:0] RHR;
+	reg [7:0] weight;
+	reg [7:0] age;
+	reg [7:0] distance;
+	reg Run;
+	reg Walk;
+	reg Cycle;
+	
+	// Outputs
+	wire [7:0] seconds_Run;
+	wire [7:0] seconds_Walk;
+	wire [7:0] seconds_Cycle;
+	wire [23:0] calories_Run;
+	wire [23:0] calories_Walk;
+	wire [23:0] calories_Cycle;
+	wire [7:0] speed;
+	wire [7:0] THR;
+	
+	// Instantiate the Unit Under Test (UUT)
+	fitness_tracker uut (
+	    .clk(clk),
+	    .rst(rst),
+	    .RHR(RHR),
+	    .weight(weight),
+	    .age(age),
+	    .distance(distance),
+	    .Run(Run),
+	    .Walk(Walk),
+	    .Cycle(Cycle),
+	    .seconds_Run(seconds_Run),
+	    .seconds_Walk(seconds_Walk),
+	    .seconds_Cycle(seconds_Cycle),
+	    .calories_Run(calories_Run),
+	    .calories_Walk(calories_Walk),
+	    .calories_Cycle(calories_Cycle),
+	    .speed(speed),
+	    .THR(THR)
+	);
+	
+	// Clock generation
+	always #10 clk = ~clk;
+	
+	initial begin
+	    // Initialize Inputs
+	    clk = 0;
+	    rst = 1;
+	    RHR = 8'd60;  // Initial heart rate
+	    weight = 8'd70;      // Weight in kg
+	    distance = 8'd100;   // Distance in meters
+	    Run = 0;
+	    Walk = 0;
+	    Cycle = 0;
+	
+	    // Reset the system
+	    #10 rst = 0;
+	
+	    // Test case 1: Start activity 1 for 10 seconds
+	    #20 Run = 1;
+	    #100 Run = 0;  // Simulate activity 1 for 10 seconds
+	
+	    // Test case 2: Start activity 2 for 15 seconds
+	    #20 Walk = 1;
+	    #150 Walk = 0;  // Simulate activity 2 for 15 seconds
+	
+	    // Test case 3: Start activity 3 for 20 seconds
+	    #20 Cycle = 1;
+	    #200 Cycle = 0;  // Simulate activity 3 for 20 seconds
+	
+	
+	    #20 $display("Average Speed:%d m/s", distance/(seconds_Run+seconds_Walk+seconds_Cycle));
+	    #20 $display("Total Time: %d sec", (seconds_Run+seconds_Walk+seconds_Cycle));
+	    // End simulation after testing
+	    #100 $finish;
+	end
+	
+	// Monitor output for stopwatch, calorie calculation, speed, and THR
+	
+	initial begin
+	    $monitor("Time: %0t | Run: %b | Walk: %b | Cycle: %b | Sec_Run: %d | calories_Run: %d | Sec_Walk: %d | calories_Walk: %d | Sec_Cycle: %d | calories_Cycle: %d | Speed: %d | THR: %d", 
+	             $time, Run, Walk, Cycle, seconds_Run, calories_Run, seconds_Walk, calories_Walk, seconds_Cycle, calories_Cycle, speed, THR);
+	end
+	
+	endmodule
 
 </details>
 
