@@ -790,9 +790,9 @@ The activity which was being performed for the given time is stored in a registe
 	);
 	
 	// Constants for calorie calculation
-	localparam MET_Run = 5;
-	localparam MET_Walk = 8;
-	localparam MET_Cycle = 10;
+	localparam MET_Run = 10;
+	localparam MET_Walk = 5;
+	localparam MET_Cycle = 8;
 	
 	always @(*) begin
 	    // Calorie calculation for each activity
