@@ -76,7 +76,7 @@ a unique, sensor-free approach to fitness monitoring.
   <summary>Click here</summary>
 
   ### Main Circuit's Working
-  In this project model, users input their Weight, Age, Resting Heart Rate(RHR) and Distance along with selecting a specific type of physical activity (namely Walking, Running or Cycling) to receive data upon certain physical attributes after performing the said activity. Once the activity is selected using a switch (which also acts as the start-stop switch for the stopwatch clock), simultaneously the sequential block of the circuit is triggered which is used to track the duration of the activity. The inputs of the users are stored in registers which relay the necessary data further to the respective modules.
+  In this project model, users input their Weight, Resting Heart Rate(RHR) and Distance along with selecting a specific type of physical activity (namely Walking, Running or Cycling) to receive data upon certain physical attributes after performing the said activity. Once the activity is selected using a switch (which also acts as the start-stop switch for the stopwatch clock), simultaneously the sequential block of the circuit is triggered which is used to track the duration of the activity. The inputs of the users are stored in registers which relay the necessary data further to the respective modules.
   To enter the data of a new user, a reset switch is used which resets the stored values of all the registers to zero, since we have used low level trigger registers here. This allows us to change the data as we require for the new user after which we can toggle the reset switch back to zero to calculate the data for the new user.
 
 The following components are used for the implementation of all the modules:
@@ -91,7 +91,7 @@ The following components are used for the implementation of all the modules:
 The following modules are used in the circuit: 
 
 #### Calorie Counter
-This processing unit takes time, type of activity and weight of the person as the input and provides the calories burned by the user while performing the activity. At a time only one activity can be selected. According to the activity selected, the MET(Metabolic Equivalent of Task) data is then further passed in the unit for processing. MET values are 8(1000) for running, 5(0101) for walking and 10(1010) for cycling. The ongoing time, MET and weight are multiplied together using the formula:
+This processing unit takes time, type of activity and weight of the person as the input and provides the calories burned by the user while performing the activity. At a time only one activity can be selected. According to the activity selected, the MET(Metabolic Equivalent of Task) data is then further passed in the unit for processing. MET values are 10(1010) for running, 5(0101) for walking and 8(1000) for cycling. The ongoing time, MET and weight are multiplied together using the formula:
 				
     Calorie Counter = time(seconds) * MET * weight(kgs)
 The time and MET value is first passed into the 10 bit by 8 bit multiplier and then the output of this multiplier is passed along with the weight of the person to another 10 bit by 8 bit multiplier to generate the amount of Calories burned.
