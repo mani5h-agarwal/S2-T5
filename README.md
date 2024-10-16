@@ -460,6 +460,10 @@ The activity which was being performed for the given time is stored in a registe
 	endmodule
 
 </details>
+<details>
+	<summary>Output</summary>
+ <img width="962" alt="Screenshot 2024-10-16 at 10 32 36 PM" src="https://github.com/user-attachments/assets/b8f83ed5-4d2a-434e-8034-3c432b09dd96">
+</details>
 
 ## References
 <details>
