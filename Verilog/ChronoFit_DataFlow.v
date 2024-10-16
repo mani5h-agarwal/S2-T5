@@ -1,16 +1,16 @@
 module fitness_tracker (
     input wire clk,          // Clock signal
     input wire rst,          // Reset signal
-    input wire [7:0] RHR,  // 7-bit Resting heart rate
-    input wire [7:0] weight,      // 7-bit Weight input
-    input wire [7:0] age,         // 7-bit Age input
+    input wire [7:0] RHR,  // 8-bit Resting heart rate
+    input wire [7:0] weight,      // 8-bit Weight input
+    input wire [7:0] age,         // 8-bit Age input
     input wire [7:0] distance,    // 8-bit Distance input
     input wire Run,         // Activity 1 button input
     input wire Walk,         // Activity 2 button input
     input wire Cycle,         // Activity 3 button input
-    output wire [7:0] seconds_Run, // Time spent on activity 1 (6-bit)
-    output wire [7:0] seconds_Walk, // Time spent on activity 2 (6-bit)
-    output wire [7:0] seconds_Cycle, // Time spent on activity 3 (6-bit)
+    output wire [7:0] seconds_Run, // Time spent on activity 1 (8-bit)
+    output wire [7:0] seconds_Walk, // Time spent on activity 2 (8-bit)
+    output wire [7:0] seconds_Cycle, // Time spent on activity 3 (8-bit)
     output wire [23:0] calories_Run, // Calories burned in activity 1
     output wire [23:0] calories_Walk, // Calories burned in activity 2
     output wire [23:0] calories_Cycle, // Calories burned in activity 3
