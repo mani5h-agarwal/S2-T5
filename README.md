@@ -462,7 +462,7 @@ The activity which was being performed for the given time is stored in a registe
 </details>
 <details>
 	<summary>Output</summary>
- <img width="962" alt="Screenshot 2024-10-16 at 10 32 36 PM" src="https://github.com/user-attachments/assets/b8f83ed5-4d2a-434e-8034-3c432b09dd96">
+<img width="966" alt="Screenshot 2024-10-16 at 10 37 52 PM" src="https://github.com/user-attachments/assets/aec71b03-1d40-4ef2-9aca-fb1f976d99b9">
 </details>
 
 ## References
