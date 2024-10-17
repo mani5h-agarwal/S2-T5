@@ -35,7 +35,7 @@ college students and beyond.
 
   >
 The ChronoFit project aims to develop a digital stopwatch that not only functions as a conventional lap timer but also provides fitness insights such as calorie count, heart rate estimates,
-and stamina tracking—all without the use of physical sensors. By utilizing average data and
+and speed tracking—all without the use of physical sensors. By utilizing average data and
 user inputs (such as weight, distance covered, age, and type of activity), ChronoFit will deliver
 a unique, sensor-free approach to fitness monitoring.
 
