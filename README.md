@@ -947,6 +947,36 @@ The activity which was being performed for the given time is stored in a registe
 
 </details>
 
+## Hardware
+
+<details>
+	<summary>Calorie Calculator</summary>
+	The Calorie Counter module calculates the number of calories burnt according to the formula:
+Calories Burnt = weight * time * MET
+For the hardware implementation we have used 2 bits for weight , time and MET value each.The
+inputs to this module are A1A0 which represents the weight, B1B0 which represents the time coming
+from the Sequential Module and S1S0 which represents the type of activity selected(running, cycling,
+walking etc). The MET calculator submodule passes on the MET value calculated from the activity
+inputs to the Calorie Counter. MET value is equal to 2(10) when the first activity is selected and
+equal to 3(11) when the second activity is selected.
+We have used 4 AND(7408), 2 Adder(7483), 1 XOR(7486), 1 NOT(7404).
+</details>
+<details>
+	<summary>Sequential-Speed Calculator</summary>
+The speed calculator module calculates the speed of the given user depending upon the time the
+user has performed an activity. The distance is taken as an input from the user, scaled down to 2
+bits for easier implementation. The sequential part of the circuit consists of a 2 bit counter which
+tells us how long the activity has been performed by the user. A reset button allows us to reset the
+counter to zero, allowing us to feed in another activity when required. The 2 bit counter feeds in
+the time to the Speed Calculator module which calculates the speed based on the formula :
+Speed = Distance (2 bits) / Time (2 bits).
+The ICs used in the above circuit are: 1 7476(JK - flip flop), 1 7408(2 input AND), 1 7404(NOT),
+3 7411(3 input AND).
+</details>
+<details>
+	<summary>Simplified Circuit</summary>
+	
+</details>
 ## References
 <details>
   <summary>Click here</summary>
