@@ -975,8 +975,8 @@ The ICs used in the above circuit are: 1 7476(JK - flip flop), 1 7408(2 input AN
 </details>
 <details>
 	<summary>Simplified Circuit</summary>
-	![S2-T5-CalorieCalculator](https://github.com/user-attachments/assets/3c5c2422-938b-4027-a9c8-45b79089325c)
-![S2-T5-SeqSpeedCalculator](https://github.com/user-attachments/assets/1bea4bc8-6c14-4e4b-a072-c2d93bd29e4d)
+	<img width="965" alt="Screenshot 2024-10-17 at 2 58 03 AM" src="https://github.com/user-attachments/assets/3c5c2422-938b-4027-a9c8-45b79089325c">
+	<img width="965" alt="Screenshot 2024-10-17 at 2 58 03 AM" src="https://github.com/user-attachments/assets/1bea4bc8-6c14-4e4b-a072-c2d93bd29e4d">
 
 </details>
 
